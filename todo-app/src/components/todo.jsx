@@ -12,12 +12,17 @@ export function Todo() {
         {todoList.map((todo) => {
           return (
             <li key={todo.todoId} className="card-container-horizontal">
+              <div>
               <div className="space-between">
                 <div className="flex-txt">
-                  <h3>{todo.title}</h3>
-                  <p class="title-small txt-s">category</p>
+                  <h3>Title:{todo.title}</h3>
+                  <p className="title-small txt-s">category</p>
+                  
                 </div>
+
                 <PinBtn/>
+              </div>
+              <div class="todo-tags bg-baseblue">P0</div>
               </div>
 
               <p>
@@ -27,7 +32,7 @@ export function Todo() {
                 of type and scrambled it to make a type specimen book.
               </p>
 
-              <div>
+              <div className="space-between">
                 <DoneBtn />
                 <DeleteBtn />
               </div>

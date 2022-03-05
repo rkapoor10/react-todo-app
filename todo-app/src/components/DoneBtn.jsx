@@ -1,5 +1,5 @@
 export function DoneBtn(){
     return(
-        <button>Done</button>
+        <button className="btn-secondary txt-s">Mark as Done</button>
     )
 }
