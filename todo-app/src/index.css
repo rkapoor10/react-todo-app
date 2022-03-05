@@ -1,3 +1,5 @@
+@import "./stylesheets/todo.css";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+.add-todo-btn{
+  height: 3rem;
+  width: 3rem;
 }

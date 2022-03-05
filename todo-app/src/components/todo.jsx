@@ -1,21 +1,40 @@
 import { DoneBtn } from "./DoneBtn";
 import { PinBtn } from "./PinBtn";
 import { DeleteBtn } from "./DeleteBtn";
+import { useTodoList } from "../context-hooks/todoList-context";
 
-export function Todo({todoInput}) {
-  
+export function Todo() {
+  const {todoList} = useTodoList()
   return (
     <>
-        {todoInput.map((todo) => {
+      <h2>Todo List</h2>
+      <ul className="grid-column-layout">
+        {todoList.map((todo) => {
           return (
-            <li key={todo.todoId}>
-              {todo.title}
-              <DoneBtn />
-              <PinBtn />
-              <DeleteBtn />
+            <li key={todo.todoId} className="card-container-horizontal">
+              <div className="space-between">
+                <div className="flex-txt">
+                  <h3>{todo.title}</h3>
+                  <p class="title-small txt-s">category</p>
+                </div>
+                <PinBtn/>
+              </div>
+
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+
+              <div>
+                <DoneBtn />
+                <DeleteBtn />
+              </div>
             </li>
           );
         })}
+      </ul>
     </>
   );
 }
